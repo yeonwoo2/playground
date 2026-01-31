@@ -1,0 +1,125 @@
+:root {
+  --bg: #2F2C3D;
+  --fg: #e9e9ee;
+  --muted: rgba(233,233,238,0.65);
+  --muted2: rgba(233,233,238,0.35);
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+/* body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  letter-spacing: -0.2px;
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url("/assets/bg2.gif");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  color: #fff;
+  font-family: monospace;
+}
+
+.wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.amount {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.amount__value {
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.address {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+  position: relative;
+  margin-top: 18px; 
+  margin-bottom: 28px;
+  max-width: min(680px, 92vw);
+}
+
+.address__text {
+  font-size: 14px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: min(520px, 70vw);
+}
+
+.copyBtn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  color: var(--fg);
+  border-radius: 10px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyBtn:hover { background: rgba(255,255,255,0.05); }
+.copyBtn:active { transform: translateY(1px); }
+
+.copyBtn__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.toast {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.55);
+  color: var(--fg);
+  border-radius: 999px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.toast.show { opacity: 1; }
+
+.character {
+  display: grid;
+  place-items: center;
+}
+
+.character__img {
+  opacity: 0.9;
+  width: 80px;
+  height: auto;
+  image-rendering: pixelated; /* 도트 느낌 강화 */
+  filter: contrast(1.05) saturate(0.95);
+}
