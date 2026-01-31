@@ -10,12 +10,25 @@
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
-body {
+/* body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
   font-family: ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   letter-spacing: -0.2px;
+} */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url("/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  color: #fff;
+  font-family: monospace;
 }
 
 .wrap {
@@ -27,7 +40,7 @@ body {
 
 .amount {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 100px;
 }
 
 .amount__value {
@@ -104,7 +117,7 @@ body {
 }
 
 .character__img {
-  width: 120px;
+  width: 80px;
   height: auto;
   image-rendering: pixelated; /* 도트 느낌 강화 */
   filter: contrast(1.05) saturate(0.95);
