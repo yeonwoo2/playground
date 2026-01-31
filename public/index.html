@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>Express Toy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>neo beggar</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <h1>Hello Express</h1>
+  <main class="wrap">
+    <!-- 1) 현재 후원금 -->
+    <section class="amount" aria-label="현재 후원금">
+      <div class="amount__value" id="amountValue">$1,274.00</div>
+      <div class="address">
+        <span class="address__text" id="donationAddress">0xA1B3C5D7E9F1A1B3C5D7E9F1A1B3C5D7E9F1</span>
+        <button class="copyBtn" id="copyBtn" type="button" aria-label="주소 복사">
+          <!-- 깔끔한 클립보드 아이콘 (SVG) -->
+          <svg class="copyBtn__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 9h10v12H9V9Z" stroke="currentColor" stroke-width="1.5" />
+            <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+
+        <div class="toast" id="toast" role="status" aria-live="polite">복사됨</div>
+      </div>
+    </section>
+
+    <!-- 3) 구걸 캐릭터 GIF -->
+    <section class="character" aria-label="캐릭터">
+      <img class="character__img" src="/assets/beggar.gif" alt="무릎 꿇고 구걸하는 도트 캐릭터" />
+    </section>
+  </main>
+
+  <script src="/main.js"></script>
 </body>
 </html>
