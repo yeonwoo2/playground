@@ -104,7 +104,7 @@ body {
 }
 
 .character__img {
-  width: min(320px, 70vw);
+  width: 120px;
   height: auto;
   image-rendering: pixelated; /* 도트 느낌 강화 */
   filter: contrast(1.05) saturate(0.95);
