@@ -28,6 +28,29 @@
     </section>
   </main>
 
+  <div class="modal" id="walletModal" aria-hidden="true" role="dialog">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content">
+      <header class="modal__header">
+        <h2 class="modal__title">Wallet Transfer</h2>
+        <button class="modal__close" id="modalClose" aria-label="닫기">&times;</button>
+      </header>
+      <div class="modal__body">
+        <p class="modal__desc">아래의 QR 코드 또는 주소를 사용하여 전송을 완료해 주세요.</p>
+        <div class="qr-placeholder">
+          <div class="qr-placeholder__box">QR CODE</div>
+        </div>
+        <div class="wallet-info">
+          <label class="wallet-info__label">송금 주소</label>
+          <div class="wallet-info__address">TMDwbeDgMnGVykGgnkDxGthJTAUjKnSzJG</div>
+        </div>
+      </div>
+      <footer class="modal__footer">
+        <button class="confirmBtn" id="confirmBtn" type="button">완료</button>
+      </footer>
+    </div>
+  </div>
+
   <script src="/main.js"></script>
 </body>
 </html>
